@@ -3,15 +3,102 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 255, 255, 255;
-}
+  /* Color styles */
+  --domeFM-on-surface-variant: 0, 0%, 36.1%;
+  --domeFM-on-surface: 60, 9.8%, 10%;
+  --domeFM-surface: 0, 0%, 98.8%;
+  --domeFM-surface-variant: 44, 9.2%, 76.7%;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 0, 0, 0;
-  }
-}
+  --domeFM-input-container: 40, 42.9%, 94.5%;
+  --domeFM-input-on-container: 64, 100%, 5.7%;
 
-body {
-  color: rgb(var(--foreground-rgb));
+  --domeFM-primary: 64, 73.8%, 68.6%;
+  --domeFM-primary-on-container: 64, 100%, 5.7%;
+  --domeFM-primary-container: 64, 73.8%, 68.6%;
+  --domeFM-primary-container-hover: 64, 70.4%, 60.2%;
+  --domeFM-primary-container-pressed: 64, 69.6%, 53.5%;
+  --domeFM-primary-container-selected: 64, 61.9%, 55.7%;
+
+  --domeFM-secondary-on-container: 62, 41.6%, 82.5%;
+  --domeFM-secondary-container: 60, 6.3%, 15.5%;
+  --domeFM-secondary-container-hover: 60, 3.6%, 16.3%;
+  --domeFM-secondary-container-pressed: 60, 3.9%, 20%;
+  --domeFM-secondary-container-selected: 60, 3.6%, 21.6%;
+
+  --domeFM-error: 0, 75.5%, 41.6%;
+  --domeFM-on-error: 0, 0%, 100%;
+  --domeFM-error-container: 6, 100%, 92%;
+  --domeFM-error-on-container: 358, 100%, 12.7%;
+  --domeFM-error-disabled-on-container: 53, 4%, 55.5%;
+  --domeFM-error-disabled-container: 44, 9.2%, 76.7%;
+
+  --domeFM-primary-0: 0, 0%, 0%;
+  --domeFM-primary-4: 64, 100%, 2.9%;
+  --domeFM-primary-5: 67, 100%, 3.5%;
+  --domeFM-primary-6: 66, 100%, 4.1%;
+  --domeFM-primary-10: 64, 100%, 5.7%;
+  --domeFM-primary-12: 64, 100%, 6.5%;
+  --domeFM-primary-17: 64, 100%, 8.6%;
+  --domeFM-primary-20: 64, 100%, 10%;
+  --domeFM-primary-22: 64, 100%, 11%;
+  --domeFM-primary-24: 64, 100%, 11.8%;
+  --domeFM-primary-25: 65, 100%, 12.4%;
+  --domeFM-primary-30: 63, 100%, 14.5%;
+  --domeFM-primary-35: 64, 100%, 17.1%;
+  --domeFM-primary-40: 64, 100%, 19.4%;
+  --domeFM-primary-50: 64, 81.2%, 27.1%;
+  --domeFM-primary-60: 64, 56.5%, 37.8%;
+  --domeFM-primary-70: 64, 45.3%, 48%;
+  --domeFM-primary-80: 64, 54%, 58.2%;
+  --domeFM-primary-87: 65, 66.9%, 65.7%;
+  --domeFM-primary-90: 64, 73.8%, 68.6%;
+  --domeFM-primary-92: 65, 79.9%, 70.8%;
+  --domeFM-primary-94: 65, 87%, 72.9%;
+  --domeFM-primary-95: 65, 90.9%, 74.1%;
+  --domeFM-primary-96: 64, 93.8%, 74.9%;
+  --domeFM-primary-98: 64, 100%, 84.1%;
+  --domeFM-primary-99: 61, 100%, 91.8%;
+  --domeFM-primary-100: 0, 0%, 100%;
+
+  --domeFM-neutral-0: 0, 0%, 0%;
+  --domeFM-neutral-4: 60, 16.7%, 4.7%;
+  --domeFM-neutral-5: 60, 17.2%, 5.7%;
+  --domeFM-neutral-6: 60, 14.3%, 6.9%;
+  --domeFM-neutral-10: 60, 9.8%, 10%;
+  --domeFM-neutral-12: 60, 8.5%, 11.6%;
+  --domeFM-neutral-17: 60, 6.3%, 15.5%;
+  --domeFM-neutral-20: 60, 6.5%, 18%;
+  --domeFM-neutral-22: 60, 6%, 19.6%;
+  --domeFM-neutral-24: 50, 5.5%, 21.6%;
+  --domeFM-neutral-25: 60, 5.3%, 22.4%;
+  --domeFM-neutral-30: 51, 5.1%, 26.9%;
+  --domeFM-neutral-35: 60, 4.4%, 31.2%;
+  --domeFM-neutral-40: 51, 3.8%, 35.9%;
+  --domeFM-neutral-50: 53, 3.4%, 45.5%;
+  --domeFM-neutral-60: 53, 4%, 55.5%;
+  --domeFM-neutral-70: 48, 5.7%, 65.9%;
+  --domeFM-neutral-80: 44, 9.2%, 76.7%;
+  --domeFM-neutral-87: 45, 15%, 84.3%;
+  --domeFM-neutral-90: 44, 17.5%, 87.6%;
+  --domeFM-neutral-92: 45, 23.1%, 89.8%;
+  --domeFM-neutral-94: 45, 30%, 92.2%;
+  --domeFM-neutral-95: 45, 35.3%, 93.3%;
+  --domeFM-neutral-96: 40, 42.9%, 94.5%;
+  --domeFM-neutral-98: 45, 66.7%, 96.5%;
+  --domeFM-neutral-99: 61, 100%, 91.8%;
+  --domeFM-neutral-100: 0, 0%, 100%;
+
+  --domeFM-source-seed: 64, 100%, 19.4%;
+
+  /* Text-size styles */
+  /* base size: domeFM-body-lg (16px) */
+  --domeFM-title-lg: 1.38rem;
+  --domeFM-title-md: 1rem;
+  --domeFM-title-sm: 0.88rem;
+  --domeFM-body-lg: 1rem;
+  --domeFM-body-md: 0.88rem;
+  --domeFM-body-sm: 0.75rem;
+  --domeFM-label-lg: 0.88rem;
+  --domeFM-label-md: 0.75rem;
+  --domeFM-label-sm: 0.69rem;
 }

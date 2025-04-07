@@ -1,0 +1,11 @@
+services:
+  # Postgres
+  postgres:
+    container_name: dome-fm
+    image: postgres
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=mydb
+    ports:
+      - 6500:5432
